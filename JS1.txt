@@ -1,0 +1,345 @@
+Dasar Java Script
+https://www.youtube.com/watch?v=SDROba_M42g
+******************************************************
+-merupakan bahasa scripting seperti php dsb
+-harus konsisten penggunaan titik koma
+
+//komentar
+-ditandari "//" atau "/**/"
+
+//Tipe data number
+-tipe ini bisa berupa bilangan bulat/desimal/pecahan
+
+//Numbber notation
+-JS mendukung number notation heksa, desimal, octal, biner,dsb.
+    0xFF, 0b10101,O010
+
+//Tipe data boolean
+    true
+    false
+
+//Tipe data String
+-bisa menggunakan petik "" atau ''
+-harus konsisten
+-menambah string menggunakan "+"
+
+//Escape
+    \n      ENTER
+    \t      TAB
+    \'      '
+    \"      "
+    \\      \
+
+//Variabel
+-dynamic language(di variabel yang sama, tipe data bisa diubah ubah)
+- kata kunci    "var" tidak direkomendasikan
+
+//Kata kunci let dan const
+-var diganti dengan let karena desainnya bermasalah
+- dignati "let" dan "const"
+
+//Operasi Matematika
+-aritmatika             :   +,-,*,/,**,/,%
+-augmented assignment   :   +=,-=,*=,/=,**=,/=,%=
+-operator unary         :   +,-,++,--
+-operator perbanduingan :   >,<,>=,<=,==,!=
+                 (apakah tipe data sama) ===,!==
+-operator logika        :   %%,||,!
+
+//Console
+-dilakukan untuk melakukan logging
+-mekanisme untuk memnampilkan informasi tanpa mengganggu 
+    aplikasi/interaksi user
+-fitur:     console.informasi()     : memberitahu indormasi   
+            console.warn()          : memberitahu peringatan
+            console.error()         : memberitahu error
+            console.table()         : memberitahu informasi bebentuk table
+
+//String template
+-penggunaan  operator + terlalu banyak menyulitkan
+-fitur String template berfungsi mensubtitusi data dari luar string kedalam string
+-menggunakan `(backtick)
+
+//Expression di String template
+-expression bisa ditambahkan di String template
+    console.log(`${name} apakah lulus? ${nilai>=batasnilai}`);
+
+//Multiline String
+-cukup me-enter di dalam backtik
+
+//Konversi String dan number
+-fungsi:
+    parseInt(String)
+    parseFloat(String)
+    Number(String)
+    number.toStrring()
+
+//NaN
+-not a number(data yang tidak valid)
+
+//isNaN() function
+-fungsi untuk mengecek apakah data adalah NaN
+
+//Array
+-di javascript array adalah dinamis(panjang array dinamis)
+    let array = [];
+    let array = ["Muhammad", "Nur Ilmi"];
+        let array = ["Muhammad", "Nur Ilmi",1,true];
+-operasi:   
+    array.push()
+    array.length
+    array[index]
+    array[index]= value
+    delete array[index], saat dihapus index tidak tergeser
+
+//Associative array
+-di Java script tidak didikung assosiative array
+-adalah tipe data index selain number
+
+//Tipe Object
+-   const orang = {};
+-merubah atribut array mirip array
+    param[properti] = propertibaru;
+    const orang = {
+        nama:"Muhammad Nur Ilmi",
+        alamat:"Indonesia",
+        umur=10
+    }
+    console.table(orang);
+
+//Akses properti Object
+    orang.nama = ...
+    orang.alamat = ...
+    orang["nama"]= ...
+
+//Percabangan
+-mengeksekusi blok tertentu saat kondisi terpenuhi
+    if(){
+        ...
+    }else if{
+        ...
+    }else{
+        ...
+    }
+
+//Alert Promp Confirm
+-merupakan sebuah PopUp dan Input
+    alert();
+    prompt();
+    confirm();
+
+//Undefined
+-merupakan kata kunci java script
+-adalah tipe data yang datanya belum didefinisikan
+-saat membuat properti/array/object yang isinya Undefined
+
+//NULL
+-datanya kosong
+
+//Switch Expression
+    switch (nilai):
+    case 'A':
+        ...
+        break;
+    case 'B':
+        ...
+        break;
+    case 'C':
+        ...
+        break;
+    default:
+        ...    
+
+//Operator typeof
+-digunakan untuk melihat tipe data suatu variabel
+
+//In Operator
+-digunakan untuk mengecek apakah suatu properti 
+    berada dalam objek/array atau tidak
+
+//Kode in operator null/Undefined
+
+//Operator ternary
+-bentuk sederhana dari if statement
+    const ucapan = nilai>=75? "Selamat Lulus":"yanh ngulang";
+
+//Nullish Coealescing Operator
+-nullist value adalah null dan undendefined
+        let param;
+        let data = param?? "Nilai default";
+        alert(data);
+
+//Opsional Chaining
+-operator untuk mengamankan ketika ingin 
+    mengakses properti dari objek dari data Nullish
+
+//Falshy dan Truthy
+    Data Falshy , data yang dianggap false
+    ***********
+    false           boolean false
+    0,-0            number 0 dan -0 dianggap false
+    "",'',``        string kosong dianggap false
+    null            null dianggap false
+    Undefined       undefined dianggap false
+    NaN             nan dianggap false
+
+    Data Truthy, kebalikan dari data Falshy
+
+    //Operator Logika Non boolean
+    -di javascript operator AND dan 
+        OR dapat digunakan di tipe data Non boolean
+    -OPERATOR OR
+        -yang diambil dari 2 data non logika adalah 
+        data Truthy
+        -bila kedua data falshy maka falshy terakhir yang dipilih
+    -OPERATOR AND
+        -yang diambil pertama adalah data falshy
+        -bila tidak ada falshy maka yang diambil data terakhir
+
+//PERULANGAN For Loop
+    for(init statement;kondisi;post statement){
+        ...
+    }
+
+//PERULANGAN While Loop
+    while(statement){
+        ...
+    }
+
+//PERULANGAN Do While Loop
+    do{
+        ...
+    }while();
+
+//Break dan Continue
+-break digunakan untuk menghentikan suatu perulangan
+-contonue digunakan untuk menghentikan perulangan 
+    saat ini dan melanjutkan perulangan selanjutnya
+
+//Label
+-ditandai oleh ":"
+
+//For In
+-merupakan perulangan for yang digunakan untuk mengiterasi 
+    seluruh data properti objek atau index array
+-biasanya dignuakan pada objek
+-di dalam array akan diambil indexnya
+    for(i i in array){
+        ...
+    }
+
+//For Of
+-dilakukan untuk melakukan perulangan pada isi valuenya
+-bisa digunakan pada array atau String
+-tidak bisa digunakan pada objek
+    for(const i of array{
+        ...
+    })
+
+
+//With statement
+-digunakan untuk menurunkan scope data
+-bisa mengakses properti data tanpa menyebut datanya
+        with(person){
+            console.log(firstName);
+            console.log(middleName);
+            console.log(lastName);
+            ...
+        }
+
+//function
+-blok kode program yang akan bekerja bila dipanggil
+    function namafungsi(){
+           ...   
+    }
+
+//Optional Parameter
+-secara default, parameter di function Optional
+-bila parameter tidak diisi maka parmaeter bernilai undefined
+
+//Default Parameter
+-bila parameter tidak diisi maka data default yang sudah diset akan diambil
+
+//Rest Parameter
+-fitur dimana bisa mengirim data sebanyak banyaknya pada satu parameter
+-rest parameter harus di pposisi terakhir
+
+//arguments object
+-        function oldSum(){
+            let total = 0;
+            for(const argument of arguments){
+                total+=argument;
+            }
+            document.writeln(total);
+        }
+
+        oldSum(1,2,3,4,5);
+
+//Function sebagai value
+
+//Anonymous Function
+-digunakan saat membuat fungsi yang sederhana
+-suatu fungsi yang tak memiliki nama
+        const say = function(name){
+            document.writeln(`Hello ${name}`);
+
+        }
+        say("Muhammad Nur Ilmi");
+
+        function giveMeName(callback){
+            callback("Eko");
+        }
+
+        giveMeName(function(name){
+           document.writeln(`Hello${name}`);
+        })
+
+//Nested Function
+-function di dalam function
+
+//scope
+-adalah ruang lingkup akses data
+-global
+-local
+
+//REcursive function
+-kemampuan suatu fungsi untuk memanggil dirinya sendiri
+-konsepnya memakai stack di mana data kembalian suatu 
+fungsi disimpan di dalam stak
+
+//Function Generator
+-perlu menggunaakna tanda "*" setelah function
+-mengembalikan data dnegan kata "yield"
+
+//Lazy Evaluation
+-function generator  bersifat pemalas
+-selama data belum diambil dari function generator,
+    function akan terus berjalan
+
+//Arrow Function
+-adalah alternatif pembuatan function yang lebih sederhana
+-terdapat limitasi
+-mengguankan tanda "=>"
+-kekurangan:
+    -tidak memiliki fitur argument object
+    -tidak bisa menggunakan function generator
+    -tidak bisa mengakses this
+    -tidak bisa mengakses super
+
+//CLosure
+-kombinasi function 
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+

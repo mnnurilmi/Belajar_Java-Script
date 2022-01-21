@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+    <script>
+
+        //5! = 5*4*3*2*1
+
+        function faktorialRekursif(value){
+            if(value ===1){
+                return 1;
+            }else{
+                return value*faktorialRekursif(value-1);
+            }
+        }
+
+        document.writeln(faktorialRekursif(5));
+    </script>
+</body>
+</html>
